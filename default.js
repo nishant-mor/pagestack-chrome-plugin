@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     chrome.tabs.getSelected(null, function(tab) {
 
     var http = new XMLHttpRequest();
-    var url = "http://localhost:3000/api/insert";
+    var url = "http://pagestack.ml/api/insert";
     http.open("POST" , url , true);
     http.setRequestHeader("Content-type" ,"application/json");
     var data = JSON.stringify({"url_name":tab.url});

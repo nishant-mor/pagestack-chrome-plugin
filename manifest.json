@@ -9,6 +9,6 @@
    "default_popup": "default.html"
   },
 
-  "permissions": [ "tabs","activeTab", "contextMenus", "https://localhost:3000/", "http://*/*", "https://*/*" ]
+  "permissions": [ "tabs","activeTab", "contextMenus", "https://pagestack.ml/", "http://*/*", "https://*/*" ]
 
 }
