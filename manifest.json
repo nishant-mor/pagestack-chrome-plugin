@@ -5,10 +5,13 @@
   "description": "No desc",
   "version": "1.0",
 
+  "permissions": [ "tabs","activeTab", "contextMenus", "http://*/*", "https://*/*" ],
   "browser_action": {
-   "default_popup": "default.html"
+    "default_icon": "/public/images/black_small.png",
+    "default_popup":"default.html"
   },
-
-  "permissions": [ "tabs","activeTab", "contextMenus", "https://pagestack.ml/", "http://*/*", "https://*/*" ]
+    "background": {
+    "scripts": ["background.js"]
+   }
 
 }
