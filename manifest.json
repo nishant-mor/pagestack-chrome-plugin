@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "pagestack",
+  "description": "No desc",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "default.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
