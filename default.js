@@ -1,14 +1,17 @@
 
-var tablink;
+
+var hostname = "http://pagestack.ml"
+var tablink , tabtitle;
 chrome.tabs.getSelected(null,function(tab) {
     tablink = tab.url;
+    tabtitle = tab.title;
 });
 
-
+console.log("jk0");
 
 // check if user is logged in
 var http= new XMLHttpRequest(); 
-var url = "http://localhost/api/isauthenticated";
+var url = hostname + "/api/isauthenticated";
 console.log("ferg")
 http.addEventListener("load", reqListener);
 http.open("GET" , url , true);
@@ -26,17 +29,17 @@ function reqListener() {
     console.log("clicked");
 
     var http2 = new XMLHttpRequest();
-    var url2 = "http://localhost/api/insert";
+    var url2 = hostname + "/api/insert";
     http2.addEventListener("load", reqListener2);
     http2.open("POST" , url2 , true);
     http2.setRequestHeader("Content-type" ,"application/json");
-    var data = JSON.stringify({"url_name":tablink});
+    var data = JSON.stringify({"url_name":tablink , "title" : tabtitle});
     http2.send(data);
 
 
   }
   else{
-    chrome.tabs.create({ url: "http://localhost/login" });
+    chrome.tabs.create({ url: hostname + "/login" });
   }
 }
 
