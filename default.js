@@ -1,6 +1,6 @@
 
 
-var hostname = "http://pagestack.ml"
+var hostname = "https://pagestack.herokuapp.com"
 var tablink , tabtitle;
 chrome.tabs.getSelected(null,function(tab) {
     tablink = tab.url;
